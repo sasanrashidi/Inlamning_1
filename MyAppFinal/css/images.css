@@ -1,0 +1,41 @@
+/* Adjustments for image sizes */
+.image-container {
+    position: relative; /* Ensure proper positioning */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    width: calc(33.33% - 20px); /* Adjust width to fit three images per row */
+    margin-right: 20px; /* Add right margin for spacing between images */
+    margin-bottom: 20px; /* Add bottom margin for spacing between rows */
+    display: inline-block; /* Ensure images are displayed inline */
+    vertical-align: top; /* Align images to the top of their container */
+}
+
+.image-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Increase shadow on hover */
+    transform: scale(1.10);
+    transition: transform 1s;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.image-container p {
+    text-align: center;
+}
+
+/* Adjustments to show three images per row */
+.image-container:nth-child(3n) {
+    margin-right: 0; /* Remove right margin for every third image to avoid extra spacing */
+}
+
+.about-contentImage {
+    height: calc(100vh - 150px); /* Adjust height as needed */
+    overflow-y: auto
+  }
+  

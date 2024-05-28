@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a New Book</title>
+
+    <!-- Include your CSS files -->
+    <link rel="stylesheet" href="./css/MyApps.css" />
+    <link rel="stylesheet" href="./css/images.css" />
+    <link rel="stylesheet" href="./css/tables.css" />
+    <link rel="stylesheet" href="./css/about.css" />
+    <link rel="stylesheet" href="./css/form.css" />
+    <link rel="stylesheet" href="./css/buttons.css" />
+</head>
+<body>
+    <div class="GridPage">
+        <div class="GridItemMain">
+            <!-- Your form code -->
+            <form class="formContainer" id="newBookForm" method="post">
+                <div class="formIntroContainer">
+                    <div>
+                        <h1>Music Group Information</h1>
+                        <h2>Details about your favorite Music Group</h2>
+                        <legend>Group & Album</legend>
+                    </div>
+                   
+                </div>
+
+                <div class="formContentContainer">
+                    <fieldset>
+                        <div class="formInputContainer">
+                            <input id="musicGroupName" name="musicGroupName" type="text" placeholder="AC/DC" required />
+                            <label for="musicGroupName">Music Group Name</label>
+                        </div>
+                        <div class="formInputContainer">
+                            <input id="genre" name="genre" type="text" placeholder="Rock" required />
+                            <label for="genre">Genre</label>
+                        </div>
+                        <div class="formInputContainer">
+                            <input id="establishedYear" name="establishedYear" type="text" placeholder="2000" required />
+                            <label for="establishedYear">Year published</label>
+                        </div>
+                        <div class="formInputContainer">
+                            <input id="artistLength" name="artistLength" type="text" placeholder="5" required />
+                            <label for="artistLength">Number of Members</label>
+                        </div>
+                        <div class="formInputContainer">
+                            <input id="totalAlbum" name="totalAlbum" type="text" placeholder="3" required />
+                            <label for="totalAlbum">Total Albums</label>
+                        </div>
+                    </fieldset>
+                </div>
+
+                
+            </form>
+        </div>
+        <!-- Sidebar -->
+        <div class="GridItemSideOne">
+            <div class="side-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="images.html">Images</a></li>
+                    <li><a href="tables.html">Table</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="form.html">Form</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Header and Footer -->
+        <div class="GridItemHeader">Guess The Characters.</div>
+        <div class="GridItemFooter">(c)Sazoo</div>
+    </div>
+
+    <script type="module" src="./script/form.js"></script>
+</body>
+</html>

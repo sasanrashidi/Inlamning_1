@@ -1,0 +1,117 @@
+/* Define the widths: play around with these to get a best fit. */
+
+:root {
+    --cell-width: 200px;
+  
+  }
+  
+  body {
+    font-size: 20px;
+    overflow: hidden; /* Prevent body from scrolling */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    height: 100vh; /* Ensure body takes full viewport height */
+}
+
+#SearchArea {
+  margin-top: 50px;
+  display:flex;
+  justify-content: center;
+}
+
+  
+  .tableFluid {
+    padding: 30px;
+  }
+  
+  .theadFluid .trFluid {
+    /* background-color: #FFEEDB; */
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .trFluid {
+    padding: 10px;
+  }
+  
+  .trFluid:nth-child(even) {
+    /* background-color: lightgray; */
+  }
+  
+  /* Main container: initialize the flex, direction is row */
+  .trFluid {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 10px
+  }
+  
+  /* Wrappers around cells and other wrappers: flex, row, wrap */
+  .trFluid_Grouping2, 
+  .trFluid_Grouping1
+  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
+  
+  .trFluid_Grouping2.num, 
+  .trFluid_Grouping1.num {
+    flex-grow: 0;
+  }
+  
+  /* Text based cells: grow, truncate and show ellipsis when there is not enough space */
+  .tdFluent {
+    flex-grow: 1; 
+    overflow: hidden; 
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 10px; /* Add padding */
+    width: var(--cell-width);
+    border: 1px solid #ccc; /* Add border for clear separation */
+}
+
+.tdFluent:hover {
+  overflow: visible; /* Show overflowing content on hover */
+  white-space: normal; /* Allow text to wrap normally */
+  text-overflow: unset; /* Remove ellipsis effect on hover */
+}
+  
+  .tdFluent.num {
+    width: var(--cell-width);
+    text-align: right;
+  }
+
+/* Hover effect for list items in the table */
+.tbodyFluid .trFluid:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add box shadow on hover */
+  transform: scale(1.10); /* Scale transformation on hover */
+  transition: box-shadow 0.3s ease, transform 1s; /* Smooth transition */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+
+.about-contentTable {
+  height: 100vh; /* Adjust height to take the full viewport height */
+  
+  padding: 30px; /* Add padding if needed */
+  box-sizing: border-box; /* Include padding in height calculation */
+}
+
+.table-container {
+  height: 100%; /* Make sure it takes the full height of the parent */
+  overflow: hidden; /* Ensure it doesn't scroll */
+}
+
+
+.trFluid_Grouping1 a {
+  color: red; /* Change to your desired color */
+}
+
+.trFluid_Grouping1 a:hover {
+  color: lightgreen; /* Change to your desired hover color */
+}

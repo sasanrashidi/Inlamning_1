@@ -1,0 +1,163 @@
+/* Reset default margin and padding */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Grid container for the entire page */
+.GridPage {
+  display: grid;
+  background-color: indigo;
+  height: 100vh;
+  grid-template-columns: 140px repeat(3, 1fr);
+  grid-template-rows: 50px 1fr 30px;
+  grid-template-areas:
+      'header header header header'
+      'side1 main main main'
+      'footer footer footer footer';
+}
+
+/* Responsive layout adjustments for smaller screens */
+@media (max-width: 600px) {
+  .GridPage {
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: 50px 50px 1fr 30px;
+      grid-template-areas:
+          'header header header header header header header header'
+          'side1 side1 side1 side1 side1 side1 side1 side1'
+          'main main main main main main main main'
+          'footer footer footer footer footer footer footer footer';
+  }
+
+  .GridItemSideOne {
+      background-color: green;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  }
+
+  .side-menu ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+  }
+
+  .side-menu ul li {
+      margin-right: 10px;
+  }
+
+  .side-menu ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+  }
+}
+
+/* General styling for grid items */
+[class^='GridItem'] {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: wheat;
+}
+
+/* Header grid item */
+.GridItemHeader {
+  grid-area: header;
+  background-color: darkolivegreen;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+
+/* Logo-like styling for header */
+.GridItemHeader::before {
+  content: "🎮";
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+/* Side1 grid item */
+.GridItemSideOne {
+  grid-area: side1;
+  background-color: darkolivegreen;
+}
+
+/* Main grid item */
+.GridItemMain {
+  grid-area: main;
+  background-color: darkslategrey;
+  display: flex;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+/* Footer grid item */
+.GridItemFooter {
+  grid-area: footer;
+  background-color: steelblue;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Styling for images inside Main grid item */
+.GridItemMain img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+/* Transition effect for anchor tags */
+a {
+  transition: color 0.5s;
+}
+
+/* Hover effect for anchor tags inside side menu */
+.side-menu ul li:hover a {
+  font-size: 30px;
+  color: black;
+}
+
+/* Styling for the side menu */
+.side-menu {
+  font-size: 29px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+}
+
+/* Some borders to show the behavior */
+.trFluid_Grouping1 {
+  border: 1px solid green;
+  padding: 2px;
+  margin: 2px;
+}
+.trFluid_Grouping2 {
+  border: 1px solid red;
+  margin: 2px;
+}
+.trFluid:not(.header) {
+  border: 1px solid blue;
+  margin: 2px;
+}
+
+.about-contentIndex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  padding-top: 30px;
+  height: calc(100vh - 150px);
+  overflow-y: auto;
+}
